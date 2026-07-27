@@ -1,0 +1,31 @@
+/* ==========================================================================
+   SPACING TOKENS
+   Every step is derived from one base unit with calc(), so the entire
+   scale can be re-tuned by changing --space-unit alone. A fluid token
+   is included via clamp() for section-level padding that should breathe
+   more on large screens without a breakpoint.
+   ========================================================================== */
+
+:root {
+  --space-unit: 0.25rem; /* 4px @ default root font size */
+
+  --space-3xs: calc(var(--space-unit) * 1);   /* 4px  */
+  --space-2xs: calc(var(--space-unit) * 2);   /* 8px  */
+  --space-xs:  calc(var(--space-unit) * 3);   /* 12px */
+  --space-sm:  calc(var(--space-unit) * 4);   /* 16px */
+  --space-md:  calc(var(--space-unit) * 6);   /* 24px */
+  --space-lg:  calc(var(--space-unit) * 8);   /* 32px */
+  --space-xl:  calc(var(--space-unit) * 12);  /* 48px */
+  --space-2xl: calc(var(--space-unit) * 16);  /* 64px */
+  --space-3xl: calc(var(--space-unit) * 24);  /* 96px */
+
+  /* Fluid section padding: never below 2rem, never above 6rem,
+     scales with viewport in between. */
+  --space-fluid-section: clamp(2rem, 1.2rem + 4vw, 6rem);
+
+  /* Component-internal spacing composed from two scale steps rather than
+     a new hard-coded value — keeps related metrics in sync automatically. */
+  --space-card-padding: calc(var(--space-md) + var(--space-3xs));
+  --space-input-padding-y: calc(var(--space-2xs) + var(--space-3xs));
+  --space-input-padding-x: var(--space-sm);
+}

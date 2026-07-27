@@ -1,0 +1,193 @@
+/* ==========================================================================
+   SHOWCASE PAGE LAYOUT
+   One-off layout rules for this demo page only. Kept separate from
+   03-components so that folder stays limited to genuinely reusable,
+   BEM-named UI pieces.
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+}
+
+.site-header__mark {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-xs);
+  background: var(--color-primary);
+  display: grid;
+  place-content: center;
+  color: var(--color-primary-contrast);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+}
+
+.hero {
+  padding-block: calc(var(--space-fluid-section) * 0.85) var(--space-fluid-section);
+  text-align: center;
+}
+
+.hero__title {
+  max-width: 16ch;
+  margin-inline: auto;
+  margin-top: var(--space-md);
+}
+
+.hero__title em {
+  font-style: normal;
+  color: var(--color-primary);
+}
+
+.hero__subtitle {
+  max-width: 46ch;
+  margin-inline: auto;
+  margin-top: var(--space-md);
+  font-size: var(--fs-md);
+}
+
+.hero__actions {
+  margin-top: var(--space-lg);
+}
+
+.section-heading {
+  margin-bottom: var(--space-lg);
+}
+
+.section-heading__eyebrow { margin-bottom: var(--space-2xs); }
+
+.section-heading__desc {
+  max-width: 56ch;
+  margin-top: var(--space-2xs);
+}
+
+/* --- Color swatches --- */
+
+.swatch {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.swatch__fill {
+  height: 64px;
+  background: var(--swatch-color, var(--color-primary));
+}
+
+.swatch__meta {
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.swatch__name {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text);
+  display: block;
+}
+
+.swatch__value {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
+}
+
+/* --- Typography scale --- */
+
+.type-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  padding-block: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.type-row__label {
+  flex: 0 0 90px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
+}
+
+.type-row__sample {
+  font-family: var(--font-display);
+  color: var(--color-text);
+  line-height: var(--lh-tight);
+}
+
+/* --- Spacing scale --- */
+
+.space-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-block: var(--space-2xs);
+}
+
+.space-row__label {
+  flex: 0 0 130px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
+}
+
+.space-row__bar {
+  height: 14px;
+  background: var(--color-primary);
+  border-radius: var(--radius-xs);
+  width: var(--bar-width, 20px);
+}
+
+/* --- Radius & shadow tiles --- */
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-md);
+}
+
+.tile {
+  aspect-ratio: 1.4;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
+}
+
+/* --- Component showcase --- */
+
+.showcase-block {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.showcase-block + .showcase-block { margin-top: var(--space-lg); }
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-lg);
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+/* ==========================================================================
+   MAIN — single entry point, imported by index.html
+   Import order matters: each layer is broader/lower-specificity than the
+   one after it, so later rules can safely refine earlier ones without
+   fighting the cascade. In a production build these would typically be
+   bundled into one file by a build tool; @import is used here so the
+   architecture stays visible file-by-file.
+   ========================================================================== */
+
+/* 00 — Tokens: the raw design decisions, nothing else may hard-code these */
+@import "00-tokens/_colors.css";
+@import "00-tokens/_typography.css";
+@import "00-tokens/_spacing.css";
+@import "00-tokens/_radius.css";
+@import "00-tokens/_shadows.css";
+
+/* 01 — Base: element defaults, no classes */
+@import "01-base/_reset.css";
+@import "01-base/_base.css";
+
+/* 02 — Utilities: single-purpose layout/spacing classes */
+@import "02-utilities/_utilities.css";
+
+/* 03 — Components: BEM-named, reusable UI pieces */
+@import "03-components/_button.css";
+@import "03-components/_card.css";
+@import "03-components/_form.css";
+@import "03-components/_toggle.css";
+
+/* 04 — This showcase page's own one-off layout (not reusable elsewhere) */
+@import "showcase.css";

@@ -1,0 +1,19 @@
+/* ==========================================================================
+   SHADOW TOKENS
+   Dark surfaces need different shadow physics than light ones — softer,
+   darker, lower-opacity — so shadows are redefined per theme rather than
+   just reusing the light values on a dark background.
+   ========================================================================== */
+
+:root {
+  --shadow-sm: 0 1px 2px rgb(20 22 40 / 6%), 0 1px 1px rgb(20 22 40 / 4%);
+  --shadow-md: 0 6px 16px rgb(20 22 40 / 8%), 0 2px 4px rgb(20 22 40 / 6%);
+  --shadow-lg: 0 16px 40px rgb(20 22 40 / 12%), 0 4px 10px rgb(20 22 40 / 6%);
+  --shadow-focus: 0 0 0 4px var(--color-focus-ring);
+}
+
+[data-theme="dark"] {
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 35%);
+  --shadow-md: 0 8px 20px rgb(0 0 0 / 45%), 0 2px 6px rgb(0 0 0 / 30%);
+  --shadow-lg: 0 20px 45px rgb(0 0 0 / 55%), 0 6px 14px rgb(0 0 0 / 35%);
+}

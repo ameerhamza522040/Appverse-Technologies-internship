@@ -1,0 +1,63 @@
+/* ==========================================================================
+   COLOR TOKENS
+   Root tokens define the light theme (default). Dark theme overrides the
+   same custom property names under [data-theme="dark"], so every component
+   below only ever reads a token name and never a raw color value.
+   ========================================================================== */
+
+:root {
+  /* Brand */
+  --color-primary-h: 219;              /* stored as HSL parts so hover/active
+                                           states can be derived with calc()  */
+  --color-primary-s: 82%;
+  --color-primary-l: 56%;
+  --color-primary: hsl(var(--color-primary-h) var(--color-primary-s) var(--color-primary-l));
+  --color-primary-hover: hsl(var(--color-primary-h) var(--color-primary-s) calc(var(--color-primary-l) - 10%));
+  --color-primary-active: hsl(var(--color-primary-h) var(--color-primary-s) calc(var(--color-primary-l) - 18%));
+  --color-primary-contrast: #ffffff;
+  --color-primary-soft: hsl(var(--color-primary-h) 88% 95%);
+
+  /* Feedback */
+  --color-success: #1c9a6c;
+  --color-success-soft: #e4f7ef;
+  --color-danger: #e0483e;
+  --color-danger-soft: #fdeceb;
+  --color-warning: #d98a11;
+  --color-warning-soft: #fbf1de;
+
+  /* Neutrals / surfaces */
+  --color-bg: #f5f7fc;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-text: #1a1d29;
+  --color-text-muted: #5b6072;
+  --color-text-faint: #8b90a3;
+  --color-border: #e2e5ee;
+  --color-border-strong: #c9cedc;
+  --color-overlay: rgb(15 17 26 / 45%);
+
+  /* Focus ring */
+  --color-focus-ring: hsl(var(--color-primary-h) var(--color-primary-s) var(--color-primary-l) / 45%);
+}
+
+[data-theme="dark"] {
+  --color-primary-l: 68%;
+  --color-primary-soft: hsl(var(--color-primary-h) 45% 18%);
+
+  --color-success: #34c98c;
+  --color-success-soft: #113228;
+  --color-danger: #ff6b61;
+  --color-danger-soft: #38191a;
+  --color-warning: #f0a93b;
+  --color-warning-soft: #392c12;
+
+  --color-bg: #10111a;
+  --color-surface: #1a1c2a;
+  --color-surface-raised: #212437;
+  --color-text: #edeff7;
+  --color-text-muted: #a2a7bd;
+  --color-text-faint: #6b7086;
+  --color-border: #2b2e42;
+  --color-border-strong: #3b3f59;
+  --color-overlay: rgb(4 5 10 / 60%);
+}

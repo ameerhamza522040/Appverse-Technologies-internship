@@ -1,0 +1,71 @@
+/* ==========================================================================
+   UTILITIES
+   Small, single-purpose, composable classes for layout and spacing —
+   the utility-first half of this project's hybrid architecture.
+   Components (03-components) stay BEM; page composition uses these.
+   ========================================================================== */
+
+.u-container {
+  width: min(100% - (var(--space-md) * 2), 1180px);
+  margin-inline: auto;
+}
+
+.u-stack > * + * { margin-top: var(--stack-gap, var(--space-md)); }
+.u-stack--sm { --stack-gap: var(--space-sm); }
+.u-stack--lg { --stack-gap: var(--space-xl); }
+
+.u-flex { display: flex; }
+.u-flex--wrap { flex-wrap: wrap; }
+.u-items-center { align-items: center; }
+.u-justify-between { justify-content: space-between; }
+.u-gap-xs { gap: var(--space-xs); }
+.u-gap-sm { gap: var(--space-sm); }
+.u-gap-md { gap: var(--space-md); }
+.u-gap-lg { gap: var(--space-lg); }
+
+.u-grid { display: grid; gap: var(--space-md); }
+.u-grid--2 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.u-grid--3 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.u-grid--swatches { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+
+.u-section { padding-block: var(--space-fluid-section); }
+.u-section--tight { padding-block: var(--space-xl); }
+
+.u-mt-lg { margin-top: var(--space-lg); }
+.u-mt-xl { margin-top: var(--space-xl); }
+.u-mb-sm { margin-bottom: var(--space-sm); }
+.u-mb-md { margin-bottom: var(--space-md); }
+
+.u-text-center { text-align: center; }
+.u-text-muted { color: var(--color-text-muted); }
+.u-text-faint { color: var(--color-text-faint); }
+.u-text-sm { font-size: var(--fs-sm); }
+.u-mono { font-family: var(--font-mono); }
+
+.u-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.u-eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: currentColor;
+}
+
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
