@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Nova Freelance Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header">
+    <div class="logo">Nova Studio</div>
+    <div class="nav">
+      <span class="nav-item" onclick="location.href='#home'">Home</span>
+      <span class="nav-item" onclick="location.href='#services'">Services</span>
+      <span class="nav-item" onclick="location.href='#work'">Work</span>
+      <span class="nav-item" onclick="location.href='#contact'">Contact</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <div class="hero" id="home">
+    <span class="hero-title">We design digital experiences that convert</span>
+    <span class="hero-sub">A small freelance studio helping startups build clean, fast, and usable products.</span>
+    <div class="cta-btn" onclick="alert('Redirecting to contact form')">Get a quote</div>
+  </div>
+
+  <div class="section" id="services">
+    <span class="section-title">What we do</span>
+    <div class="cards">
+      <div class="card">
+        <div class="img-placeholder"></div>
+        <span class="card-title">UI / UX Design</span>
+        <span class="card-text">Wireframes, prototypes and design systems built around real user needs.</span>
+      </div>
+      <div class="card">
+        <div class="img-placeholder"></div>
+        <span class="card-title">Web Development</span>
+        <span class="card-text">Fast, responsive websites built with modern frameworks and clean code.</span>
+      </div>
+      <div class="card">
+        <div class="img-placeholder"></div>
+        <span class="card-title">Brand Identity</span>
+        <span class="card-text">Logos, style guides and visual language that make brands memorable.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="work" style="background:#fafafa;">
+    <span class="section-title">Recent work</span>
+    <div class="cards">
+      <div class="card">
+        <div class="img-placeholder"></div>
+        <span class="card-title">Finlytics Dashboard</span>
+        <span class="card-text">A finance analytics dashboard for a fintech startup.</span>
+      </div>
+      <div class="card">
+        <div class="img-placeholder"></div>
+        <span class="card-title">Roam Travel App</span>
+        <span class="card-text">A booking app redesign that increased conversions by 22%.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="contact">
+    <span class="section-title">Get in touch</span>
+    <div class="form-wrap">
+      <div class="form-row">
+        <div>Full name</div>
+        <input class="input-box" type="text" id="nameField">
+      </div>
+      <div class="form-row">
+        <div>Email address</div>
+        <input class="input-box" type="text" id="emailField">
+      </div>
+      <div class="form-row">
+        <div>Message</div>
+        <textarea class="input-box" id="msgField" rows="4"></textarea>
+      </div>
+      <div class="submit-btn" onclick="submitForm()">Send message</div>
+      <div class="status-msg" id="statusMsg"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>© 2026 Nova Freelance Studio. All rights reserved.</span>
+    <div class="footer-links">
+      <span class="footer-link" onclick="location.href='#'">Instagram</span>
+      <span class="footer-link" onclick="location.href='#'">LinkedIn</span>
+      <span class="footer-link" onclick="location.href='#'">Dribbble</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleMenu() {
+  var nav = document.querySelector('.nav');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}
+
+function submitForm() {
+  var name = document.getElementById('nameField').value;
+  var email = document.getElementById('emailField').value;
+  var msg = document.getElementById('msgField').value;
+  var status = document.getElementById('statusMsg');
+  if (!name || !email || !msg) {
+    status.innerText = 'Please fill all fields';
+    status.style.display = 'block';
+    return;
+  }
+  status.innerText = 'Message sent successfully';
+  status.style.display = 'block';
+}
+</script>
+
+</body>
+</html>
