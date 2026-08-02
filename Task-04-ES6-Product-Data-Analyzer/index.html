@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ES6 Product Data Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>ES6 Product Data Analyzer</h1>
+    <p>Practical demo of ES6+ destructuring, spread syntax, and array methods</p>
+  </header>
+
+  <main class="container">
+
+    <!-- 1. All Products -->
+    <section class="card">
+      <h2>1. All Products</h2>
+      <div class="table-wrap">
+        <table id="allProductsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. map() -->
+    <section class="card">
+      <h2>2. Product Names <span class="tag">map()</span></h2>
+      <p class="hint">Extracts just the "name" field from every product.</p>
+      <ul id="productNamesList" class="chip-list"></ul>
+    </section>
+
+    <!-- 3. filter() -->
+    <section class="card">
+      <h2>3. Filtered Products <span class="tag">filter()</span></h2>
+      <p class="hint">Products that are in stock AND have a rating of 4.4 or higher.</p>
+      <div class="table-wrap">
+        <table id="filteredProductsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. reduce() -->
+    <section class="card">
+      <h2>4. Total Inventory Value <span class="tag">reduce()</span></h2>
+      <p class="hint">Adds up (price &times; stock) for every product.</p>
+      <p id="totalInventoryValue" class="result-value"></p>
+    </section>
+
+    <!-- 5. find() -->
+    <section class="card">
+      <h2>5. Product Found <span class="tag">find()</span></h2>
+      <p class="hint">Looks up a single product by name: "Smart Watch".</p>
+      <div id="productFound" class="found-box"></div>
+    </section>
+
+    <!-- 6. some() -->
+    <section class="card">
+      <h2>6. Out-of-Stock Check <span class="tag">some()</span></h2>
+      <p class="hint">Is there at least one product with 0 stock?</p>
+      <p id="someResult" class="result-value"></p>
+    </section>
+
+    <!-- 7. every() -->
+    <section class="card">
+      <h2>7. Minimum Rating Check <span class="tag">every()</span></h2>
+      <p class="hint">Does every product have a rating of 3.5 or higher?</p>
+      <p id="everyResult" class="result-value"></p>
+    </section>
+
+    <!-- 8. Summary Object -->
+    <section class="card">
+      <h2>8. Summary Object</h2>
+      <p class="hint">Built using the spread operator to merge stats into one object.</p>
+      <div class="table-wrap">
+        <table id="summaryTable">
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>ES6 Product Data Analyzer &mdash; Appverse Technologies Internship Task</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
