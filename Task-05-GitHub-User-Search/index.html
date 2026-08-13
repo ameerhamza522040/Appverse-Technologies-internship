@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub User Search</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="app-header">
+      <h1 class="app-title">GitHub User Search</h1>
+      <p class="app-description">
+        Enter a GitHub username to look up their public profile information.
+      </p>
+    </header>
+
+    <main>
+
+      <!-- Search controls -->
+      <section class="search-card" aria-label="Search for a GitHub user">
+        <div class="search-row">
+          <div class="search-field">
+            <label for="usernameInput" class="visually-hidden">GitHub username</label>
+            <input
+              type="text"
+              id="usernameInput"
+              class="search-input"
+              placeholder="e.g. octocat"
+              autocomplete="off"
+            />
+          </div>
+          <button type="button" id="searchBtn" class="btn btn-primary">Search</button>
+          <button type="button" id="clearBtn" class="btn btn-secondary">Clear</button>
+        </div>
+
+        <!-- Loading state -->
+        <p id="loadingMessage" class="status loading-message" role="status" aria-live="polite" hidden>
+          Searching GitHub...
+        </p>
+
+        <!-- Error state -->
+        <p id="errorMessage" class="status error-message" role="alert" hidden></p>
+      </section>
+
+      <!-- Profile result -->
+      <section id="profileCard" class="profile-card" aria-label="GitHub profile result" hidden>
+        <img id="profileAvatar" class="profile-avatar" src="" alt="" />
+
+        <div class="profile-info">
+          <h2 id="profileName" class="profile-name"></h2>
+          <p id="profileUsername" class="profile-username"></p>
+          <p id="profileBio" class="profile-bio"></p>
+
+          <div class="profile-stats">
+            <div class="stat">
+              <span id="statRepos" class="stat-value">0</span>
+              <span class="stat-label">Repos</span>
+            </div>
+            <div class="stat">
+              <span id="statFollowers" class="stat-value">0</span>
+              <span class="stat-label">Followers</span>
+            </div>
+            <div class="stat">
+              <span id="statFollowing" class="stat-value">0</span>
+              <span class="stat-label">Following</span>
+            </div>
+          </div>
+
+          <p id="profileLocation" class="profile-location"></p>
+
+          <a id="profileLink" class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+            View GitHub Profile
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="app-footer">
+      <p>Frontend Development Internship &mdash; Async JavaScript and Modules</p>
+    </footer>
+
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
