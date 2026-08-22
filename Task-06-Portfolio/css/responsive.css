@@ -1,0 +1,114 @@
+/* ==========================================================================
+   responsive.css — Mobile-first breakpoints
+   Base styles (in style.css / components.css) target small screens.
+   These min-width queries progressively enhance the layout upward.
+   ========================================================================== */
+
+/* ---------- Tablet: 600px+ ---------- */
+@media (min-width: 600px) {
+  .hero__cta {
+    flex-wrap: nowrap;
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .edu-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ---------- Tablet / small desktop: 768px+ ---------- */
+@media (min-width: 768px) {
+  .navbar__toggle {
+    display: none;
+  }
+
+  .navbar__menu {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: 0;
+    background: transparent;
+    transform: none;
+    overflow: visible;
+    inset: auto;
+  }
+
+  .navbar__link {
+    padding: 0.3rem 0;
+    border-bottom: none;
+    font-size: 0.85rem;
+  }
+
+  .navbar__link--cta {
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .navbar__link--cta:hover {
+    border-color: var(--color-accent);
+  }
+
+  /* Hero shifts to a two-column named grid: content column + meta sidebar */
+  .hero__grid {
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-areas:
+      "eyebrow  eyebrow"
+      "title    meta"
+      "subtitle meta"
+      "cta      meta";
+    column-gap: var(--space-xl);
+  }
+
+  .hero__meta {
+    grid-template-columns: 1fr;
+    border-top: none;
+    border-left: 1px solid var(--color-border-soft);
+    padding-top: 0;
+    padding-left: var(--space-lg);
+  }
+
+  .about__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills__groups {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .timeline__item {
+    gap: var(--space-lg);
+  }
+}
+
+/* ---------- Desktop: 1024px+ ---------- */
+@media (min-width: 1024px) {
+  .hero {
+    padding-block: 7rem 5rem;
+  }
+
+  .section {
+    padding-block: 6.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- Large desktop: 1280px+ ---------- */
+@media (min-width: 1280px) {
+  .hero__title {
+    max-width: 20ch;
+  }
+}

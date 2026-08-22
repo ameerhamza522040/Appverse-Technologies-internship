@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="decodeTitle">
+  <title id="decodeTitle">Abstract illustration representing frontend development work at DecodeLabs</title>
+  <rect width="400" height="300" fill="#F1EEE7"/>
+  <rect x="0" y="0" width="400" height="300" fill="none" stroke="#E3E0D6" stroke-width="1"/>
+
+  <!-- browser chrome -->
+  <g transform="translate(52,54)">
+    <rect x="0" y="0" width="296" height="192" rx="8" fill="#FFFFFF" stroke="#CFCBBD"/>
+    <rect x="0" y="0" width="296" height="30" rx="8" fill="#F1EEE7"/>
+    <circle cx="18" cy="15" r="4" fill="#CFCBBD"/>
+    <circle cx="32" cy="15" r="4" fill="#CFCBBD"/>
+    <circle cx="46" cy="15" r="4" fill="#CFCBBD"/>
+    <rect x="70" y="9" width="140" height="12" rx="6" fill="#E3E0D6"/>
+
+    <!-- component / interactive-elements composition -->
+    <circle cx="60" cy="90" r="26" fill="#24437B" opacity="0.85"/>
+    <rect x="104" y="64" width="174" height="14" rx="7" fill="#B9C6DD"/>
+    <rect x="104" y="86" width="120" height="10" rx="5" fill="#DCE3F0"/>
+    <rect x="18" y="132" width="80" height="38" rx="6" fill="#DCE3F0"/>
+    <rect x="108" y="132" width="80" height="38" rx="6" fill="#24437B" opacity="0.15"/>
+    <rect x="198" y="132" width="80" height="38" rx="6" fill="#DCE3F0"/>
+  </g>
+
+  <line x1="52" y1="266" x2="232" y2="266" stroke="#CFCBBD" stroke-width="1"/>
+  <text x="52" y="286" font-family="'JetBrains Mono', monospace" font-size="11" fill="#83868F" letter-spacing="0.5">HTML5 · CSS3 · JavaScript</text>
+</svg>

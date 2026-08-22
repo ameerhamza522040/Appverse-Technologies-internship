@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ameer Hamza — Software Engineering Student</title>
+  <meta name="description" content="Portfolio of Ameer Hamza, a Software Engineering student at University of Gujrat building web applications with React, Python, and ASP.NET.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="site-header" id="header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="#top" class="navbar__brand">
+        <span class="navbar__brand-mark">AH</span>
+        <span class="navbar__brand-text">ameer<span class="accent">.</span>dev</span>
+      </a>
+
+      <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <ul class="navbar__menu" id="navMenu">
+        <li><a href="#about" class="navbar__link">About</a></li>
+        <li><a href="#skills" class="navbar__link">Skills</a></li>
+        <li><a href="#projects" class="navbar__link">Projects</a></li>
+        <li><a href="#experience" class="navbar__link">Experience</a></li>
+        <li><a href="#education" class="navbar__link">Education</a></li>
+        <li><a href="#contact" class="navbar__link navbar__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__grid">
+        <p class="hero__eyebrow">Software Engineering Student · 7th Semester</p>
+
+        <h1 class="hero__title">
+          Hi, I'm <span class="accent">Ameer Hamza.</span><br>
+          I build clean, functional interfaces&nbsp;— and I'm learning to build the systems behind them.
+        </h1>
+
+        <p class="hero__subtitle">
+          BS Software Engineering candidate at the University of Gujrat, currently working across
+          React, Python, and ASP.NET while exploring full-stack and AI/ML development.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+        </div>
+
+        <dl class="hero__meta">
+          <div class="hero__meta-item">
+            <dt>Status</dt>
+            <dd><span class="status-dot" aria-hidden="true"></span>Open to internship opportunities</dd>
+          </div>
+          <div class="hero__meta-item">
+            <dt>Location</dt>
+            <dd>Gujrat, Pakistan</dd>
+          </div>
+          <div class="hero__meta-item">
+            <dt>Graduating</dt>
+            <dd>July 2027</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="section__inner">
+        <p class="section__label">01 · About</p>
+        <h2 class="section__title">A bit about me</h2>
+
+        <div class="about__grid">
+          <p class="about__text">
+            I'm a Software Engineering student at the University of Gujrat, currently in my 7th semester
+            and on track to graduate in July 2027. Over the past few internships and personal projects,
+            I've focused on frontend development — turning designs into responsive, accessible interfaces —
+            while building a working foundation in backend development with Python, C#, and ASP.NET.
+          </p>
+          <p class="about__text">
+            Right now I'm expanding into full-stack development and taking my first real steps into
+            AI/ML and agentic systems. I like projects that force me to actually understand what's
+            happening under the UI, not just how to style it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--muted" id="skills">
+      <div class="section__inner">
+        <p class="section__label">02 · Skills</p>
+        <h2 class="section__title">Technologies I work with</h2>
+
+        <div class="skills__groups">
+          <div class="skills__group">
+            <h3 class="skills__group-title">Languages</h3>
+            <ul class="pill-list">
+              <li class="pill">HTML</li>
+              <li class="pill">CSS</li>
+              <li class="pill">JavaScript</li>
+              <li class="pill">Python</li>
+              <li class="pill">C#</li>
+              <li class="pill">SQL</li>
+            </ul>
+          </div>
+
+          <div class="skills__group">
+            <h3 class="skills__group-title">Frameworks &amp; Libraries</h3>
+            <ul class="pill-list">
+              <li class="pill">React</li>
+              <li class="pill">ASP.NET</li>
+              <li class="pill">Tailwind CSS</li>
+            </ul>
+          </div>
+
+          <div class="skills__group">
+            <h3 class="skills__group-title">Tools &amp; Platforms</h3>
+            <ul class="pill-list">
+              <li class="pill">Git / GitHub</li>
+              <li class="pill">Firebase</li>
+              <li class="pill">REST APIs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="section__inner">
+        <p class="section__label">03 · Projects</p>
+        <h2 class="section__title">Featured project</h2>
+
+        <div class="card-grid" id="projectGrid">
+
+          <article class="project-card">
+            <div class="project-card__head">
+              <span class="project-card__tag">Featured</span>
+              <span class="project-card__type">Full Application</span>
+            </div>
+
+            <h3 class="project-card__title">Library Management System</h3>
+            <p class="project-card__desc">
+              A system built to manage library operations such as tracking books, members, and
+              borrowing records — built to practice structuring a real, functional application
+              rather than a single-page demo.
+            </p>
+
+            <ul class="project-card__tech">
+              <li>C#</li>
+              <li>SQL</li>
+              <li>ASP.NET</li>
+            </ul>
+
+            <div class="project-card__actions">
+              <a href="https://github.com/ameerhamza522040/Library-Management-System.git" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card project-card--more">
+            <div class="project-card__more-inner">
+              <h3 class="project-card__title">More on GitHub</h3>
+              <p class="project-card__desc">
+                This portfolio and additional work in progress live on my GitHub profile.
+              </p>
+              <div class="project-card__actions">
+                <a href="https://github.com/ameerhamza522040" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
+                  Visit Profile
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section--muted" id="experience">
+      <div class="section__inner">
+        <p class="section__label">04 · Experience</p>
+        <h2 class="section__title">Where I've worked</h2>
+
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="exp-card">
+              <div class="exp-card__head">
+                <h3 class="exp-card__role">Frontend Development</h3>
+                <span class="exp-card__company">Appverse Technologies</span>
+              </div>
+              <p class="exp-card__desc">
+                Worked on frontend development tasks, building interfaces and practicing
+                real-world frontend workflows as part of an internship program.
+              </p>
+              <div class="exp-card__actions">
+                <a href="https://github.com/ameerhamza522040/Appverse-Technologies-internship.git" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
+                  View Repository
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="exp-card">
+              <div class="exp-card__head">
+                <h3 class="exp-card__role">Frontend Development</h3>
+                <span class="exp-card__company">DecodeLabs</span>
+              </div>
+              <p class="exp-card__desc">
+                Contributed to frontend development work during an internship, focused on
+                building and refining interface components.
+              </p>
+              <div class="exp-card__actions">
+                <a href="https://github.com/ameerhamza522040/Decodelabs-Internship.git" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
+                  View Repository
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <div class="section__inner">
+        <p class="section__label">05 · Education</p>
+        <h2 class="section__title">Academic background</h2>
+
+        <div class="edu-card">
+          <div class="edu-card__main">
+            <h3 class="edu-card__degree">BS Software Engineering</h3>
+            <p class="edu-card__school">University of Gujrat</p>
+          </div>
+          <div class="edu-card__meta">
+            <span class="pill pill--outline">7th Semester</span>
+            <span class="pill pill--outline">Expected Graduation: July 2027</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="section section--muted" id="certifications">
+      <div class="section__inner">
+        <p class="section__label">06 · Certifications</p>
+        <h2 class="section__title">Certifications</h2>
+
+        <div class="cert-grid">
+          <article class="cert-card">
+            <h3 class="cert-card__title">Google AI Essentials</h3>
+            <p class="cert-card__issuer">Coursera</p>
+          </article>
+          <article class="cert-card">
+            <h3 class="cert-card__title">Google Prompt Engineering</h3>
+            <p class="cert-card__issuer">Coursera</p>
+          </article>
+          <article class="cert-card">
+            <h3 class="cert-card__title">Python Certification</h3>
+            <p class="cert-card__issuer">freeCodeCamp</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CURRENTLY EXPLORING ============ -->
+    <section class="section" id="exploring">
+      <div class="section__inner">
+        <p class="section__label">07 · Currently Exploring</p>
+        <h2 class="section__title">What I'm learning now</h2>
+
+        <ul class="pill-list pill-list--large">
+          <li class="pill pill--accent">Full-Stack Development</li>
+          <li class="pill pill--accent">AI / ML / DL</li>
+          <li class="pill pill--accent">Advanced Python</li>
+          <li class="pill pill--accent">Agentic AI</li>
+          <li class="pill pill--accent">Model Training</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--muted" id="contact">
+      <div class="section__inner">
+        <p class="section__label">08 · Contact</p>
+        <h2 class="section__title">Let's talk</h2>
+        <p class="contact__intro">
+          I'm currently looking for internship opportunities. Feel free to reach out — I try to
+          reply within a couple of days.
+        </p>
+
+        <div class="contact__actions">
+          <a href="mailto:ameer.hamza276000@gmail.com" class="btn btn--primary btn--large">
+            Email Me
+          </a>
+          <button type="button" class="btn btn--ghost btn--large" id="copyEmailBtn" data-email="ameer.hamza276000@gmail.com">
+            Copy Email
+          </button>
+        </div>
+
+        <ul class="social-list">
+          <li>
+            <a href="https://github.com/ameerhamza522040" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span class="social-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.75.12 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              </span>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ameer-hamza-051374404/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span class="social-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+              </span>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="mailto:ameer.hamza276000@gmail.com" class="social-link">
+              <span class="social-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm19 2.4-8.53 6.4a1 1 0 0 1-1.2 0L2.74 6.4 2 6l.02 12.98L21 19V6.4Z"/></svg>
+              </span>
+              Email
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>Designed &amp; built by Ameer Hamza.</p>
+      <p>&copy; <span id="year"></span> Ameer Hamza. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

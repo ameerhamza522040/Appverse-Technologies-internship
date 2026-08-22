@@ -1,0 +1,35 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="libTitle">
+  <title id="libTitle">Abstract illustration representing the Library Management System project</title>
+  <rect width="400" height="300" fill="#F1EEE7"/>
+  <rect x="0" y="0" width="400" height="300" fill="none" stroke="#E3E0D6" stroke-width="1"/>
+
+  <!-- database / table rows representing SQL Server data -->
+  <g transform="translate(56,64)">
+    <rect x="0" y="0" width="180" height="26" rx="4" fill="#FFFFFF" stroke="#CFCBBD"/>
+    <rect x="14" y="10" width="90" height="6" rx="3" fill="#24437B" opacity="0.55"/>
+    <rect x="0" y="34" width="180" height="26" rx="4" fill="#FFFFFF" stroke="#CFCBBD"/>
+    <rect x="14" y="44" width="120" height="6" rx="3" fill="#83868F" opacity="0.5"/>
+    <rect x="0" y="68" width="180" height="26" rx="4" fill="#FFFFFF" stroke="#CFCBBD"/>
+    <rect x="14" y="78" width="70" height="6" rx="3" fill="#83868F" opacity="0.5"/>
+    <rect x="0" y="102" width="180" height="26" rx="4" fill="#FFFFFF" stroke="#CFCBBD"/>
+    <rect x="14" y="112" width="100" height="6" rx="3" fill="#83868F" opacity="0.5"/>
+  </g>
+
+  <!-- book stack -->
+  <g transform="translate(268,72)">
+    <rect x="0" y="60" width="70" height="16" rx="2" fill="#24437B"/>
+    <rect x="6" y="40" width="58" height="16" rx="2" fill="#3A5A96"/>
+    <rect x="0" y="20" width="70" height="16" rx="2" fill="#B9C6DD"/>
+    <rect x="10" y="0" width="50" height="16" rx="2" fill="#24437B" opacity="0.75"/>
+  </g>
+
+  <!-- lock / auth badge -->
+  <g transform="translate(285,190)">
+    <circle cx="27" cy="27" r="27" fill="#FFFFFF" stroke="#CFCBBD"/>
+    <rect x="16" y="24" width="22" height="16" rx="3" fill="none" stroke="#24437B" stroke-width="2.4"/>
+    <path d="M20 24v-6a7 7 0 0 1 14 0v6" fill="none" stroke="#24437B" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+
+  <line x1="56" y1="220" x2="236" y2="220" stroke="#CFCBBD" stroke-width="1"/>
+  <text x="56" y="240" font-family="'JetBrains Mono', monospace" font-size="11" fill="#83868F" letter-spacing="0.5">ASP.NET · C# · SQL Server</text>
+</svg>

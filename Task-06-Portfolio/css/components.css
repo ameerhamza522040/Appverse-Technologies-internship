@@ -1,0 +1,448 @@
+/* ==========================================================================
+   components.css — Reusable UI components
+   ========================================================================== */
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: transform var(--duration) var(--ease),
+    background-color var(--duration) var(--ease),
+    border-color var(--duration) var(--ease),
+    color var(--duration) var(--ease);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: #06181A;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-strong);
+}
+
+.btn--ghost {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--ghost:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn--small {
+  padding: 0.55rem 1rem;
+  font-size: 0.8rem;
+}
+
+.btn--large {
+  padding: 0.9rem 1.8rem;
+  font-size: 0.95rem;
+}
+
+/* ---------- Pills / tags ---------- */
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill-list--large {
+  gap: 0.75rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  transition: border-color var(--duration) var(--ease), color var(--duration) var(--ease);
+}
+
+.pill:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.pill--outline {
+  background-color: transparent;
+}
+
+.pill--accent {
+  color: var(--color-accent);
+  border-color: rgba(94, 234, 212, 0.35);
+}
+
+.skills__groups {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.skills__group-title {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+}
+
+/* ---------- Responsive project/card grid ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+  /* Establish a containment context so cards can query their own width */
+  container-type: inline-size;
+  container-name: card-grid;
+}
+
+.project-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: border-color var(--duration) var(--ease), transform var(--duration) var(--ease);
+}
+
+.project-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.project-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.project-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-bg);
+  background-color: var(--color-accent);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.project-card__type {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-faint);
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+}
+
+.project-card__desc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-card__tech li {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-faint);
+  border: 1px solid var(--color-border-soft);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+/* Flexbox card actions */
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: var(--space-xs);
+}
+
+.project-card--more {
+  border-style: dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-card__more-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+/* --- Real CSS container query ---
+   When a project card's containing grid track is wide enough (i.e. the
+   card itself has room to breathe), switch the header row from a tight
+   wrap to a spaced-out row and bump up the title size. This responds to
+   the card's own container width, not the viewport. */
+@container card-grid (min-width: 420px) {
+  .project-card__head {
+    justify-content: space-between;
+  }
+
+  .project-card__title {
+    font-size: 1.4rem;
+  }
+
+  .project-card__actions {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ---------- Experience timeline ---------- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  position: relative;
+}
+
+.timeline__item {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.timeline__marker {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.15);
+}
+
+.exp-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  flex-grow: 1;
+  container-type: inline-size;
+}
+
+.exp-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: var(--space-xs);
+}
+
+.exp-card__role {
+  font-size: 1.1rem;
+}
+
+.exp-card__company {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent-2);
+}
+
+.exp-card__desc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+  max-width: 60ch;
+}
+
+.exp-card__actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+/* ---------- Education ---------- */
+.edu-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.edu-card__degree {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.edu-card__school {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.edu-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* ---------- Certifications ---------- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+.cert-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  transition: border-color var(--duration) var(--ease), transform var(--duration) var(--ease);
+}
+
+.cert-card:hover {
+  border-color: var(--color-accent-2);
+  transform: translateY(-3px);
+}
+
+.cert-card__title {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.cert-card__issuer {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-text-faint);
+}
+
+/* ---------- Contact ---------- */
+.contact__intro {
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-bottom: var(--space-lg);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0;
+  transition: color var(--duration) var(--ease);
+}
+
+.social-link:hover {
+  color: var(--color-accent);
+}
+
+.social-link__icon {
+  display: inline-flex;
+  color: var(--color-text-faint);
+  transition: color var(--duration) var(--ease);
+}
+
+.social-link:hover .social-link__icon {
+  color: var(--color-accent);
+}
+
+/* ---------- Back to top ---------- */
+.back-to-top {
+  position: fixed;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease), visibility var(--duration);
+  z-index: 90;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  border-color: var(--color-accent);
+}
+
+/* ---------- Toast (copy email feedback) ---------- */
+.toast {
+  position: fixed;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translate(-50%, 20px);
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-accent);
+  color: var(--color-text);
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease);
+  z-index: 200;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
